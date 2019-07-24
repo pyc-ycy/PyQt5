@@ -8,19 +8,27 @@
 # @software: PyCharm
 
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QFileDialog
+from 初识PyQt5.MainWin01 import Ui_MainWindow
 
-from 初识PyQt5.MainWin01 import Ui_Form
 
-
-class Widget1(QWidget, Ui_Form):
+class MyMainWin(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
-        super(QWidget, self).__init__(parent)
+        super(MyMainWin, self).__init__(parent)
         self.setupUi(self)
+        # 菜单的点击事件，当点击关闭菜单时连接槽函数 close()
+        self.fileCloseAction.triggered.connect(self.close)
+        # 当点击打开菜单时连接槽函数 openMsg()
+        self.fileOpenAction.triggered.connect(self.openMsg)
+
+    def openMsg(self):
+        file, ok = QFileDialog.getOpenFileName(self, "打开", "D:/", "All Files (*);;Text Files (*.txt)")
+        # 在状态栏显示文件夹地址
+        self.statusbar.showMessage(file)
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    myWidget = Widget1()
-    myWidget.show()
+    win = MyMainWin()
+    win.show()
     sys.exit(app.exec_())

@@ -8,8 +8,8 @@
 # @software: PyCharm
 
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QFileDialog
-from 初识PyQt5.MainWin01 import Ui_MainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
+from 菜单栏和工具栏.MainWin01 import Ui_MainWindow
 
 
 class MyMainWin(QMainWindow, Ui_MainWindow):

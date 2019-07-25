@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="pic">
+    <file>python标志.jpg</file>
+    <file>log1.jpg</file>
+  </qresource>
+</RCC>

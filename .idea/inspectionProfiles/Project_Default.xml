@@ -13,6 +13,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="PyQt5.QtWidgets.clicked.*" />
+          <option value="apprcc_rc" />
         </list>
       </option>
     </inspection_tool>

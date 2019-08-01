@@ -6,6 +6,7 @@
         <list>
           <option value="N801" />
           <option value="N802" />
+          <option value="N806" />
         </list>
       </option>
     </inspection_tool>
@@ -14,6 +15,8 @@
         <list>
           <option value="PyQt5.QtWidgets.clicked.*" />
           <option value="apprcc_rc" />
+          <option value="PyQt5.QtWidgets.linkHovered.connect" />
+          <option value="PyQt5.QtWidgets.linkActivated.connect" />
         </list>
       </option>
     </inspection_tool>

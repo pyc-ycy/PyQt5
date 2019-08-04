@@ -17,6 +17,8 @@
           <option value="apprcc_rc" />
           <option value="PyQt5.QtWidgets.linkHovered.connect" />
           <option value="PyQt5.QtWidgets.linkActivated.connect" />
+          <option value="PyQt5.QtWidgets.textChanged.connect" />
+          <option value="PyQt5.QtWidgets.editingFinished.connect" />
         </list>
       </option>
     </inspection_tool>

@@ -19,6 +19,7 @@
           <option value="PyQt5.QtWidgets.linkActivated.connect" />
           <option value="PyQt5.QtWidgets.textChanged.connect" />
           <option value="PyQt5.QtWidgets.editingFinished.connect" />
+          <option value="PyQt5.QtWidgets.toggled.connect" />
         </list>
       </option>
     </inspection_tool>

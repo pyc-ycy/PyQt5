@@ -17,7 +17,7 @@ class SliderDemo(QWidget):
     def __init__(self, parent=None):
         super(SliderDemo, self).__init__(parent)
         self.setWindowTitle("QSlider 示例")
-        self.setWindowIcon(QIcon("./images/Python2.ico"))
+        # self.setWindowIcon(QIcon("./images/Python2.ico"))
         self.resize(300, 100)
 
         layout = QVBoxLayout()

@@ -27,14 +27,22 @@ class Table(QWidget):
         tableWidget.setRowCount(6)
         tableWidget.setColumnCount(3)
         conLayout.addWidget(tableWidget)
-        tableWidget.setHorizontalHeaderLabels(['姓名  ', '性别', '体重(kg)'])
-        tableWidget.setVerticalHeaderLabels(['行 1', '行 2', '行 3', '行 4', '行 5', '行 6'])
+        tableWidget.setHorizontalHeaderLabels(['姓名  ', '性别', '体重(mg)'])
+        # 设置表头可伸缩模式
+        tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # 设置行表头
+        # tableWidget.setVerticalHeaderLabels(['行 1', '行 2', '行 3', '行 4', '行 5', '行 6'])
+        # 设置为只读模式
+        # tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        # 设置行高列宽为内容适配
         newItem = QTableWidgetItem("张三")
         tableWidget.setItem(0, 0, newItem)
         newItem = QTableWidgetItem('男')
         tableWidget.setItem(0, 1, newItem)
-        newItem = QTableWidgetItem('160')
+        newItem = QTableWidgetItem('160 000 000 000')
         tableWidget.setItem(0, 2, newItem)
+        tableWidget.resizeColumnsToContents()
+        tableWidget.resizeRowsToContents()
         self.setLayout(conLayout)
 
 

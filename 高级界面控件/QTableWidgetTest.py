@@ -8,6 +8,8 @@
 
 
 import sys
+
+from PyQt5 import QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -28,6 +30,8 @@ class Table(QWidget):
         tableWidget.setColumnCount(3)
         conLayout.addWidget(tableWidget)
         tableWidget.setHorizontalHeaderLabels(['姓名  ', '性别', '体重(kg)'])
+        # 合并居中
+        tableWidget.setSpan(2, 0, 3, 1)
         # 设置表头可伸缩模式
         tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         # 设置行表头
@@ -61,11 +65,25 @@ class Table(QWidget):
         newItem3.setForeground(QBrush(QColor(255, 150, 150)))
         tableWidget.setItem(0, 2, newItem3)
         item1 = QTableWidgetItem('友聪')
+        item1.setFont(QFont("Times", 12, QFont.Black))
         item2 = QTableWidgetItem('男')
+        item2.setFont(QFont("Times", 12, QFont.Black))
         item3 = QTableWidgetItem('139')
+        item3.setFont(QFont("Times", 12, QFont.Black))
+        item4 = QTableWidgetItem('御承扬')
+        item4.setTextAlignment(Qt.AlignRight | Qt.AlignBottom)
+        item5 = QTableWidgetItem('未知')
+        item5.setTextAlignment(Qt.AlignRight | Qt.AlignBottom)
+        item6 = QTableWidgetItem('120')
+        item6.setTextAlignment(Qt.AlignRight | Qt.AlignBottom)
         tableWidget.setItem(1, 0, item1)
         tableWidget.setItem(1, 1, item2)
         tableWidget.setItem(1, 2, item3)
+        tableWidget.setItem(2, 0, item4)
+        tableWidget.setItem(2, 1, item5)
+        tableWidget.setItem(2, 2, item6)
+
+        tableWidget.sortItems(2, QtCore.Qt.DescendingOrder)
         self.setLayout(conLayout)
 
 

@@ -27,7 +27,7 @@ class Table(QWidget):
         tableWidget.setRowCount(6)
         tableWidget.setColumnCount(3)
         conLayout.addWidget(tableWidget)
-        tableWidget.setHorizontalHeaderLabels(['姓名  ', '性别', '体重(mg)'])
+        tableWidget.setHorizontalHeaderLabels(['姓名  ', '性别', '体重(kg)'])
         # 设置表头可伸缩模式
         tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         # 设置行表头
@@ -35,14 +35,28 @@ class Table(QWidget):
         # 设置为只读模式
         # tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         # 设置行高列宽为内容适配
-        newItem = QTableWidgetItem("张三")
+        # tableWidget.resizeColumnsToContents()
+        # tableWidget.resizeRowsToContents()
+        # 隐藏水平方向的表头
+        # tableWidget.verticalHeader().setVisible(False)
+        # 隐藏垂直方向表头
+        # tableWidget.horizontalHeader().setVisible(False)
+        # 往单元格中添加基本控件
+        comBox = QComboBox()
+        comBox.addItem("男")
+        comBox.addItem("女")
+        comBox.setStyleSheet("QComboBox{margin:3px};")
+        tableWidget.setCellWidget(0, 1, comBox)
+        searchBtn = QPushButton("修改")
+        searchBtn.setDown(True)
+        searchBtn.setStyleSheet("QPushButton{margin:3px};")
+        tableWidget.setCellWidget(0, 2, searchBtn)
+        newItem = QTableWidgetItem("雅男")
         tableWidget.setItem(0, 0, newItem)
-        newItem = QTableWidgetItem('男')
+        newItem = QTableWidgetItem('女')
         tableWidget.setItem(0, 1, newItem)
-        newItem = QTableWidgetItem('160 000 000 000')
+        newItem = QTableWidgetItem('98')
         tableWidget.setItem(0, 2, newItem)
-        tableWidget.resizeColumnsToContents()
-        tableWidget.resizeRowsToContents()
         self.setLayout(conLayout)
 
 

@@ -27,11 +27,11 @@ class Table(QWidget):
         conLayout = QHBoxLayout()
         tableWidget = QTableWidget()
         tableWidget.setRowCount(6)
-        tableWidget.setColumnCount(3)
+        tableWidget.setColumnCount(4)
         conLayout.addWidget(tableWidget)
-        tableWidget.setHorizontalHeaderLabels(['姓名  ', '性别', '体重(kg)'])
+        tableWidget.setHorizontalHeaderLabels(['姓名  ', '性别', '体重(kg)', '背包'])
         # 合并居中
-        tableWidget.setSpan(2, 0, 3, 1)
+        # tableWidget.setSpan(2, 0, 3, 1)
         # 设置表头可伸缩模式
         tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         # 设置行表头
@@ -64,6 +64,8 @@ class Table(QWidget):
         newItem3 = QTableWidgetItem('98')
         newItem3.setForeground(QBrush(QColor(255, 150, 150)))
         tableWidget.setItem(0, 2, newItem3)
+        newItem4 = QTableWidgetItem(QIcon("./images/bao1.png"), "背包")
+        tableWidget.setItem(0, 3, newItem4)
         item1 = QTableWidgetItem('友聪')
         item1.setFont(QFont("Times", 12, QFont.Black))
         item2 = QTableWidgetItem('男')
@@ -82,7 +84,10 @@ class Table(QWidget):
         tableWidget.setItem(2, 0, item4)
         tableWidget.setItem(2, 1, item5)
         tableWidget.setItem(2, 2, item6)
-
+        # 设置是否显示分隔线
+        # tableWidget.setShowGrid(False)
+        # 设置垂直表头不显示
+        tableWidget.verticalHeader().setVisible(False)
         tableWidget.sortItems(2, QtCore.Qt.DescendingOrder)
         self.setLayout(conLayout)
 

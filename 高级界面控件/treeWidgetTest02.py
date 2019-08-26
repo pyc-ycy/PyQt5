@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
-# Time : 2019/08/26 下午 12:13 
+# Time : 2019/08/26 下午 2:26 
 # Author : 御承扬
 # e-mail:2923616405@qq.com
 # project:  PyQt5
-# File : treeWidgetTest01.py 
+# File : treeWidgetTest02.py 
 # @software: PyCharm
 
 
@@ -18,7 +18,7 @@ class TreeWidgetDemo(QMainWindow):
         super(TreeWidgetDemo, self).__init__(parent)
         self.setWindowTitle("TreeWidget 例子")
         self.setWindowIcon(QIcon("./images/Python2.ico"))
-        self.resize(340, 150)
+        self.resize(340, 250)
         self.tree = QTreeWidget()
         # 设置列数
         self.tree.setColumnCount(2)
@@ -27,41 +27,39 @@ class TreeWidgetDemo(QMainWindow):
         # 设置根节点
         root = QTreeWidgetItem(self.tree)
         root.setText(0, 'root')
-        root.setIcon(0, QIcon("./images/root.png"))
-        # 设置根节点背景颜色
-        brush_red = QBrush(Qt.red)
-        root.setBackground(0, brush_red)
-        brush_green = QBrush(Qt.green)
-        root.setBackground(1, brush_green)
-        # 设置列宽
-        self.tree.setColumnWidth(0, 160)
+        root.setText(1, '0')
 
-        # 设置节点1
         child1 = QTreeWidgetItem(root)
         child1.setText(0, 'child1')
-        child1.setText(1, 'ios')
-        child1.setIcon(0, QIcon("./images/IOS.png"))
-        child1.setCheckState(0, Qt.Checked)
+        child1.setText(1, '1')
 
-        # 设置节点2
         child2 = QTreeWidgetItem(root)
         child2.setText(0, 'child2')
-        child2.setText(1, '')
-        child2.setIcon(0, QIcon("./images/android.png"))
+        child2.setText(1, '2')
 
-        # 设置节点 3
-        child3 = QTreeWidgetItem(child2)
+        child3 = QTreeWidgetItem(root)
         child3.setText(0, 'child3')
-        child3.setText(1, 'android')
-        child3.setIcon(0, QIcon("./images/music.png"))
+        child3.setText(1, '3')
+
+        child4 = QTreeWidgetItem(child3)
+        child4.setText(0, 'child4')
+        child4.setText(1, '4')
+
+        child5 = QTreeWidgetItem(child3)
+        child5.setText(0, 'child5')
+        child5.setText(1, '5')
+
         self.tree.addTopLevelItem(root)
-        # 节点全部展开
-        self.tree.expandAll()
+        self.tree.clicked.connect(self.onTreeClicked)
         self.setCentralWidget(self.tree)
+
+    def onTreeClicked(self, qModelIndex):
+        item = self.tree.currentItem()
+        print("Key=%s, Value=%s" % (item.text(0), item.text(1)))
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    tree = TreeWidgetDemo()
-    tree.show()
+    win = TreeWidgetDemo()
+    win.show()
     sys.exit(app.exec_())

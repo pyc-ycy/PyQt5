@@ -38,6 +38,7 @@
           <option value="PyQt5.QtWidgets.stateChanged.connect" />
           <option value="PyQt5.QtWidgets.itemClicked.connect" />
           <option value="PyQt5.QtWidgets.sliderMoved.connect" />
+          <option value="PyQt5.QtCore.timeout.connect" />
         </list>
       </option>
     </inspection_tool>

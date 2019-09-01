@@ -3,7 +3,7 @@
 # Author : 御承扬
 # e-mail:2923616405@qq.com
 # project:  PyQt5
-# File : GridLayoutTesto1.py 
+# File : GridLayoutTest01.py
 # @software: PyCharm
 
 

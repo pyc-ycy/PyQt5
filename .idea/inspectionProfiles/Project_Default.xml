@@ -39,6 +39,8 @@
           <option value="PyQt5.QtWidgets.itemClicked.connect" />
           <option value="PyQt5.QtWidgets.sliderMoved.connect" />
           <option value="PyQt5.QtCore.timeout.connect" />
+          <option value="PyQt5.QtCore.pyqtSignal.connect" />
+          <option value="PyQt5.QtCore.pyqtSignal.emit" />
         </list>
       </option>
     </inspection_tool>

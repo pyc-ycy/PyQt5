@@ -24,7 +24,6 @@ class Widget(QWidget):
         self.message = ""
         self.resize(400, 300)
         self.move(100, 100)
-        self.setWindowTitle("Events")
         QTimer.singleShot(0, self.giveHelp)  # 避免窗口大小重绘事件的影响，可以把参数0改变成3000（3秒），然后在运行，就可以明白这行代码的意思。
 
     def giveHelp(self):
@@ -46,7 +45,7 @@ class Widget(QWidget):
         twoAction.triggered.connect(self.two)
         if not self.message:
             menu.addSeparator()
-            threeAction = menu.addAction("Thre&e")
+            threeAction = menu.addAction("&Three")
             threeAction.triggered.connect(self.three)
         menu.exec_(event.globalPos())
 

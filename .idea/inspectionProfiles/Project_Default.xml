@@ -47,6 +47,9 @@
           <option value="PyQt5.QtCore.pyqtSignal.connect" />
           <option value="PyQt5.QtCore.pyqtSignal.emit" />
           <option value="PyQt5.QtWidgets.triggered.connect" />
+          <option value="PyQt5.QtWidgets.valueChanged.connect" />
+          <option value="PyQt5.QtWidgets.accepted.connect" />
+          <option value="PyQt5.QtWidgets.rejected.connect" />
         </list>
       </option>
     </inspection_tool>

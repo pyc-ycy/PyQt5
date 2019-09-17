@@ -49,6 +49,10 @@ class MainWin(QWidget):
         print('date=%s' % str(date))
         print('time=%s' % str(date))
         print('result=%s' % result)
+        if result == QDialog.Accepted:
+            print('点击确认按钮')
+        else:
+            print('点击取消按钮')
 
 
 if __name__ == "__main__":

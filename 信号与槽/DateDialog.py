@@ -7,25 +7,27 @@
 # @software: PyCharm
 
 
+from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
 
 
 class DateDialog(QDialog):
     def __init__(self, parent=None):
         super(DateDialog, self).__init__(parent)
+        self.setWindowTitle('DateDialog')
         self.setWindowIcon(QIcon("./images/Python2.ico"))
-        self.setWindowTitle("DateDialog")
+        self.resize(100, 100)
+
         layout = QVBoxLayout(self)
         self.datetime = QDateTimeEdit(self)
+        self.datetime.resize(150, 20)
         self.datetime.setCalendarPopup(True)
         self.datetime.setDateTime(QDateTime.currentDateTime())
-        layout.addWidget(self.datetime)
+
         buttons = QDialogButtonBox(
-            QDialogButtonBox.OK | QDialogButtonBox.Cancel,
-            Qt.Horizontal, self
-        )
+            QDialogButtonBox.Ok | QDialogButtonBox.Cancel,
+            Qt.Horizontal, self)
         buttons.accepted.connect(self.accept)
         buttons.rejected.connect(self.reject)
         layout.addWidget(buttons)
@@ -38,4 +40,4 @@ class DateDialog(QDialog):
         dialog = DateDialog(parent)
         result = dialog.exec_()
         date = dialog.dateTime()
-        return date.date(), date.time(), result == QDialog.Accepted
+        return (date.date(), date.time(), result == QDialog.Accepted)

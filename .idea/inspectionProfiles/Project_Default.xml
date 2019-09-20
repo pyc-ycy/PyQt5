@@ -50,6 +50,7 @@
           <option value="PyQt5.QtWidgets.valueChanged.connect" />
           <option value="PyQt5.QtWidgets.accepted.connect" />
           <option value="PyQt5.QtWidgets.rejected.connect" />
+          <option value="PyQt5.QtWidgets.dateTimeChanged.connect" />
         </list>
       </option>
     </inspection_tool>

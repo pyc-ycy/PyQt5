@@ -16,7 +16,7 @@ from PyQt5.QtGui import QPainter, QIcon
 class Widget(QWidget):
     def __init__(self, parent=None):
         super(Widget, self).__init__(parent)
-        self.setWindowIcon(QIcon("./images/Python2.ico"))
+        self.setWindowIcon(QIcon("D:\\users\\lenovo\\PyQt5\\信号与槽\\images\\Python2.ico"))
         self.setWindowTitle("鼠标事件示例")
         self.justDoubleClicked = False
         self.key = ""

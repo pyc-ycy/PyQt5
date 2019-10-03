@@ -17,11 +17,37 @@
             <widget class="DataTableWidget" name="pandastablewidget" native="true">
                 <property name="geometry">
                     <rect>
-                        <x>60</x>
+                        <x>10</x>
                         <y>60</y>
-                        <width>691</width>
+                        <width>591</width>
                         <height>451</height>
                     </rect>
+                </property>
+            </widget>
+            <widget class="QPushButton" name="pushButton">
+                <property name="geometry">
+                    <rect>
+                        <x>630</x>
+                        <y>90</y>
+                        <width>93</width>
+                        <height>28</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>数据初始化</string>
+                </property>
+            </widget>
+            <widget class="QPushButton" name="pushButton_2">
+                <property name="geometry">
+                    <rect>
+                        <x>640</x>
+                        <y>320</y>
+                        <width>93</width>
+                        <height>28</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>保存数据</string>
                 </property>
             </widget>
         </widget>

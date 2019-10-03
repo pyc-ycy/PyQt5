@@ -11,6 +11,8 @@ from __future__ import unicode_literals
 from __future__ import print_function
 from __future__ import division
 from __future__ import absolute_import
+
+from PyQt5.QtGui import QIcon
 from future import standard_library
 
 standard_library.install_aliases()
@@ -33,6 +35,8 @@ if __name__ == '__main__':
     model = DataFrameModel()
     app = QtGui.QApplication([])
     widget = DataTableWidget()
+    widget.setWindowTitle("qtPandas Demo")
+    widget.setWindowIcon(QIcon("./images/Python2.ico"))
     widget.resize(500, 300)
     widget.show()
     widget.setViewModel(model)

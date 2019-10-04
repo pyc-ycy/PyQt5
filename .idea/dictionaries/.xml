@@ -7,6 +7,7 @@
       <w>excepthook</w>
       <w>matplotlib</w>
       <w>pixmap</w>
+      <w>pyqt</w>
       <w>qodbc</w>
       <w>qsqlite</w>
       <w>recrod</w>

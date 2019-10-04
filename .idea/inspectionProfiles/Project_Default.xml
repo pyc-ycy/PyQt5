@@ -51,6 +51,7 @@
           <option value="PyQt5.QtWidgets.accepted.connect" />
           <option value="PyQt5.QtWidgets.rejected.connect" />
           <option value="PyQt5.QtWidgets.dateTimeChanged.connect" />
+          <option value="Matplotlib的应用.use_matplotlib_pyqt.matplotlib_pyqt" />
         </list>
       </option>
     </inspection_tool>

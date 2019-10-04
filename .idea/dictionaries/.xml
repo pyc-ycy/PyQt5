@@ -5,6 +5,7 @@
       <w>datagrid</w>
       <w>dddd</w>
       <w>excepthook</w>
+      <w>matplotlib</w>
       <w>pixmap</w>
       <w>qodbc</w>
       <w>qsqlite</w>

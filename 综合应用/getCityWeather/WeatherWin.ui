@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>Form</class>
+    <widget class="QWidget" name="Form">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>715</width>
+                <height>440</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>查询城市天气</string>
+        </property>
+        <property name="windowIcon">
+            <iconset resource="images.qrc">
+                <normaloff>:/ICON/images/Python2.ico</normaloff>:/ICON/images/Python2.ico
+            </iconset>
+        </property>
+        <widget class="QGroupBox" name="groupBox">
+            <property name="geometry">
+                <rect>
+                    <x>20</x>
+                    <y>20</y>
+                    <width>661</width>
+                    <height>321</height>
+                </rect>
+            </property>
+            <property name="title">
+                <string>查询城市天气</string>
+            </property>
+            <widget class="QLabel" name="label">
+                <property name="geometry">
+                    <rect>
+                        <x>30</x>
+                        <y>30</y>
+                        <width>41</width>
+                        <height>16</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>城市</string>
+                </property>
+            </widget>
+            <widget class="QComboBox" name="weatherComboBox">
+                <property name="geometry">
+                    <rect>
+                        <x>90</x>
+                        <y>30</y>
+                        <width>151</width>
+                        <height>22</height>
+                    </rect>
+                </property>
+                <item>
+                    <property name="text">
+                        <string>陆丰</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>天津</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>上海</string>
+                    </property>
+                </item>
+                <item>
+                    <property name="text">
+                        <string>北京</string>
+                    </property>
+                </item>
+            </widget>
+            <widget class="QTextEdit" name="resultText">
+                <property name="geometry">
+                    <rect>
+                        <x>10</x>
+                        <y>70</y>
+                        <width>641</width>
+                        <height>241</height>
+                    </rect>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QPushButton" name="queryBtn">
+            <property name="geometry">
+                <rect>
+                    <x>80</x>
+                    <y>380</y>
+                    <width>93</width>
+                    <height>28</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>查询</string>
+            </property>
+        </widget>
+        <widget class="QPushButton" name="clearBtn">
+            <property name="geometry">
+                <rect>
+                    <x>500</x>
+                    <y>380</y>
+                    <width>93</width>
+                    <height>28</height>
+                </rect>
+            </property>
+            <property name="text">
+                <string>清空</string>
+            </property>
+        </widget>
+    </widget>
+    <resources>
+        <include location="images.qrc"/>
+    </resources>
+    <connections>
+        <connection>
+            <sender>queryBtn</sender>
+            <signal>clicked()</signal>
+            <receiver>Form</receiver>
+            <slot>queryWeather()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>126</x>
+                    <y>393</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>357</x>
+                    <y>219</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>clearBtn</sender>
+            <signal>clicked()</signal>
+            <receiver>Form</receiver>
+            <slot>clearResult()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>546</x>
+                    <y>393</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>357</x>
+                    <y>219</y>
+                </hint>
+            </hints>
+        </connection>
+    </connections>
+    <slots>
+        <slot>queryWeather()</slot>
+        <slot>clearResult()</slot>
+    </slots>
+</ui>

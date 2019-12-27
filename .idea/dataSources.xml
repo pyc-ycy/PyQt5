@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db_2012@192.168.3.192" uuid="2a62a833-42d3-482a-92ba-b754796bc905">
-      <driver-ref>sqlserver.ms</driver-ref>
+    <data-source source="LOCAL" name="jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8" uuid="faaf4571-5ad4-4c9b-94b5-2ea8c149ce9c">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://192.168.3.192;database=db_2012</jdbc-url>
-      <driver-properties>
-        <property name="applicationName" value="DataGrip" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="SQLite - datagrid.db" uuid="98f9a621-779c-42ce-a821-800bbb4d603d">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/数据库处理/db/datagrid.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8</jdbc-url>
     </data-source>
   </component>
 </project>
